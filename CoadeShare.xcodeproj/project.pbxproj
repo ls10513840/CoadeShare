@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */; };
 		BCC98D991DAC781B00523F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D981DAC781B00523F55 /* AppDelegate.swift */; };
 		BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D9A1DAC781B00523F55 /* ViewController.swift */; };
 		BCC98D9E1DAC781B00523F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC98D9C1DAC781B00523F55 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		6CFCAC45B1027ECF3A7B8F11 /* Pods-CoadeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoadeShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoadeShare/Pods-CoadeShare.release.xcconfig"; sourceTree = "<group>"; };
+		BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoadeShareInit.swift; sourceTree = "<group>"; };
+		BC49D7CA1DADDD7E00A5F30A /* CoadeShareHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoadeShareHeader.h; sourceTree = "<group>"; };
 		BCC98D951DAC781B00523F55 /* CoadeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoadeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC98D981DAC781B00523F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCC98D9A1DAC781B00523F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		BCC98D8C1DAC781B00523F55 = {
 			isa = PBXGroup;
 			children = (
+				BC49D7CA1DADDD7E00A5F30A /* CoadeShareHeader.h */,
 				BCC98D971DAC781B00523F55 /* CoadeShare */,
 				BCC98D961DAC781B00523F55 /* Products */,
 				100D3F2059B2F3F71A341962 /* Pods */,
@@ -93,6 +97,7 @@
 				BCC98D9F1DAC781B00523F55 /* Assets.xcassets */,
 				BCC98DA11DAC781B00523F55 /* LaunchScreen.storyboard */,
 				BCC98DA41DAC781B00523F55 /* Info.plist */,
+				BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */,
 			);
 			path = CoadeShare;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */,
 				BCC98DAE1DAC79D500523F55 /* CSTabBarController.swift in Sources */,
 				BCC98DB21DACBEDD00523F55 /* CSRegisterViewController.swift in Sources */,
+				BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */,
 				BCC98D991DAC781B00523F55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,8 +371,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoadeShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ls.CoadeShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1000phone.CoadeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/CoadeShareHeader.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
@@ -377,8 +385,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoadeShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ls.CoadeShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1000phone.CoadeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/CoadeShareHeader.h";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};

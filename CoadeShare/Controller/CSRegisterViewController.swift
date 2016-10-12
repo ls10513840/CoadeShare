@@ -8,11 +8,16 @@
 
 import UIKit
 import Alamofire
-class CSRegisterViewController: UIViewController {
+import ReactiveCocoa
 
+class CSRegisterViewController: UIViewController {
+    
+    dynamic var time = -1
+    var timer:NSTimer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.cyanColor()
         self.title = "注册"
         // Do any additional setup after loading the view.
         let userName = UITextField()
@@ -91,7 +96,8 @@ class CSRegisterViewController: UIViewController {
         let codeRight = UIView()
         let codeBtn = UIButton(type: .Custom)
         codeBtn.setTitle("获取验证码", forState: .Normal)
-        codeBtn.setTitleColor(UIColor.greenColor(), forState: .Normal)
+        codeBtn.setTitleColor(UIColor.redColor(), forState: .Normal)
+        
         codeBtn.titleLabel?.font = UIFont.systemFontOfSize(13)
         codeBtn.layer.borderColor = UIColor.grayColor().CGColor
         codeBtn.layer.borderWidth = 1
@@ -110,6 +116,62 @@ class CSRegisterViewController: UIViewController {
             make.top.equalTo(4)
         }
         
+        codeBtn.enabled = false
+        codeBtn.jk_setBackgroundColor(UIColor.yellowColor(), forState: .Normal)
+        codeBtn.jk_setBackgroundColor(UIColor.darkGrayColor(), forState: .Disabled)
+        codeBtn.jk_setBackgroundColor(UIColor.lightGrayColor(), forState: .Highlighted)
+      /*
+        userName.jk_handleControlEvents(UIControlEvents.EditingChanged) { (sender) in
+            code.enabled = userName.text?.lengthOfBytesUsingEncoding(NSStringEncoding.init(NSUTF8StringEncoding)) == 11
+        }
+        */
+        userName.rac_textSignal().subscribeNext { (sender) in
+            //用rac订阅输入框改变的信号，根据输入内容，改变按钮状态
+            let name = sender as! NSString
+            codeBtn.enabled = name.length == 11 && self.time == -1
+            if name.length >= 11{
+               // password.becomeFirstResponder()
+            }
+        }
+        codeBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
+            self.time = 60
+            
+//            SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethod.init(0), phoneNumber: userName.text, zone: "86", customIdentifier: nil) { (error) in
+//                if error != nil{
+//                    // 让time重置为－1 如果现在符合条件按钮正常
+//                    self.time = -1
+//                }else{
+                    //一开始让time＝－1 （即正常状态，按钮可用）
+                    //当点击获取验证码按钮时让time＝ 60 并每秒递减1，当减到－1时读秒结束
+                    //可用监控的方式改变按钮状态
+                    self.timer = NSTimer.jk_scheduledTimerWithTimeInterval(1, block: {
+                        self.time = self.time - 1
+                        }, repeats: true) as! NSTimer
+                    
+//                }
+//                
+//            }
+        }
+
+        
+        //将几个信号合并为一个信号订阅并改变注册按钮的状态
+        //获取验证码
+        // 使用mvc思想如果数据改变，界面跟着改变
+        self.rac_valuesForKeyPath("time", observer: self).subscribeNext { (time) in
+            codeBtn.enabled = self.time == -1
+            if self.time == -1{
+                if self.timer != nil{
+                   self.timer.invalidate()
+                }
+                
+                codeBtn.setTitle("获取验证码", forState: .Normal)
+            }else{
+                codeBtn.setTitle("还剩\(self.time)秒", forState: .Normal)
+            }
+        }
+        
+        
+        //注册
        let registerBtn = UIButton(type:.Custom)
         registerBtn.setTitle("注册", forState: .Normal)
         registerBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -119,7 +181,7 @@ class CSRegisterViewController: UIViewController {
         registerBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
             Alamofire.request(.POST, "https://www.1000phone.tk", parameters: ["service":"User.Register",
                  "phone":userName.text!,
-                "password":password.text!,
+                "password":(password.text! as NSString).jk_md5String,
                 "verificationCode":code.text!
                 ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
                     if response.result.isSuccess {
@@ -130,12 +192,69 @@ class CSRegisterViewController: UIViewController {
                     }
                 })
         }
+        //在做一些关于用户敏感信息的数据交互时，一般都要对数据进行加密  Md5严格来讲 并不属于加密算法，因为MD5并没有解密过程，只是对数据进行提取特征加密，会破坏原数据的意义。   所以一般加密密码会用MD5，这样服务器人员，公司内部人员，也不知道你密码。
+        //为了更安全，我们会对原始的字符串进行加盐，再次MD5加密
+        
+        //RAS DES...这些加密算法可以通过密钥解密出原始数据，所以出了密码之外的一些信息，可以用这种加密方式
+        
         self.view.addSubview(registerBtn)
         registerBtn.snp_makeConstraints { (make) in
             make.left.right.equalTo(0)
             make.height.equalTo(52)
             make.top.equalTo(code.snp_bottom).offset(120)
         }
+        registerBtn.enabled = false
+        
+        userName.rac_textSignal()
+        .combineLatestWith(password.rac_textSignal())
+        .combineLatestWith(code.rac_textSignal())
+        .subscribeNext { (sender) in
+            registerBtn.enabled = ((userName.text! as NSString).length == 11 && (password.text! as NSString).length >= 6 && (code.text! as NSString).length == 4)
+        }
+        /*
+        //热信号实现需求
+        userName.rac_textSignal().toSignalProducer()
+        .combineLatestWith(password.rac_textSignal().toSignalProducer())
+        .combineLatestWith(code.rac_textSignal().toSignalProducer())
+        .startWithNext { (signal1, signal2) in
+            
+        }
+        */
+        registerBtn.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (sender) in
+            print(sender as! UIButton)
+        }
+        //将变量的改变量作为信号来订阅
+        
+        //处理键盘遮挡视图的问题
+        //用RAC 代替通知
+        NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil)
+        .subscribeNext { (noti) in
+            //取出通知携带的键盘的信息
+            let userInfo = (noti as! NSNotification).userInfo
+            
+            let rect = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+            //用SnapKit、给注册按钮做一个动画
+            //如果更改一个视图的约束，需要用snp_update(必须是前面已经make过的)
+            registerBtn.snp_updateConstraints(closure: { (make) in
+                make.top.equalTo(code.snp_bottom).offset(50)
+            })
+            UIView.animateWithDuration(0.25, animations: { 
+                registerBtn.layoutIfNeeded()
+            })
+        }
+        //当键盘消失，我们只需要将约束更新为原始状态即可
+        NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillHideNotification, object: nil)
+        .subscribeNext { (noti) in
+            registerBtn.snp_updateConstraints(closure: { (make) in
+                make.top.equalTo(code.snp_bottom).offset(120)
+            })
+            UIView.animateWithDuration(0.25, animations: {
+                registerBtn.layoutIfNeeded()
+            })
+        }
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
     func codeAction(){
         

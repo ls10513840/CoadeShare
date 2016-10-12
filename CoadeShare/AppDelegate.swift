@@ -19,7 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //封装一个设置window的根控制器方法
         configureRootVC()
         
+        //设置MobSMSSDK
+        setupMob()
+        
         return true
+    }
+    func setupMob(){
+        SMSSDK.registerApp(MobApp, withSecret: MobSecret)
     }
     func configureRootVC(){
         window = UIWindow(frame: UIScreen.mainScreen().bounds)

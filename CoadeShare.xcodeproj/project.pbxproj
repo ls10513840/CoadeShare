@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */; };
+		BC4AB6141DAF819600F10408 /* CSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6131DAF819600F10408 /* CSTableViewController.swift */; };
+		BC4AB6161DAF867A00F10408 /* CSMyVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */; };
+		BC4AB6181DAF876800F10408 /* CSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6171DAF876800F10408 /* CSModel.swift */; };
+		BC4AB61B1DAF8A5B00F10408 /* CSMyVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */; };
+		BC4AB61C1DAF8A5B00F10408 /* CSMyVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */; };
+		BC5FDAB81DAF20370033CD83 /* CSNetHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */; };
+		BC5FDAC01DAF3BFF0033CD83 /* CSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDABF1DAF3BFF0033CD83 /* CSUserModel.swift */; };
+		BC5FDBC41DAF67540033CD83 /* CSHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDBC31DAF67540033CD83 /* CSHelp.swift */; };
 		BCC98D991DAC781B00523F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D981DAC781B00523F55 /* AppDelegate.swift */; };
 		BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D9A1DAC781B00523F55 /* ViewController.swift */; };
 		BCC98D9E1DAC781B00523F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC98D9C1DAC781B00523F55 /* Main.storyboard */; };
@@ -23,6 +31,14 @@
 		6CFCAC45B1027ECF3A7B8F11 /* Pods-CoadeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoadeShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoadeShare/Pods-CoadeShare.release.xcconfig"; sourceTree = "<group>"; };
 		BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoadeShareInit.swift; sourceTree = "<group>"; };
 		BC49D7CA1DADDD7E00A5F30A /* CoadeShareHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoadeShareHeader.h; sourceTree = "<group>"; };
+		BC4AB6131DAF819600F10408 /* CSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTableViewController.swift; sourceTree = "<group>"; };
+		BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoListViewController.swift; sourceTree = "<group>"; };
+		BC4AB6171DAF876800F10408 /* CSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSModel.swift; sourceTree = "<group>"; };
+		BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoCell.swift; sourceTree = "<group>"; };
+		BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMyVideoCell.xib; sourceTree = "<group>"; };
+		BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSNetHelp.swift; sourceTree = "<group>"; };
+		BC5FDABF1DAF3BFF0033CD83 /* CSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserModel.swift; sourceTree = "<group>"; };
+		BC5FDBC31DAF67540033CD83 /* CSHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHelp.swift; sourceTree = "<group>"; };
 		BCC98D951DAC781B00523F55 /* CoadeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoadeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC98D981DAC781B00523F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCC98D9A1DAC781B00523F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +82,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BC5FDAB61DAF20060033CD83 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */,
+				BC5FDBC31DAF67540033CD83 /* CSHelp.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		BCC98D8C1DAC781B00523F55 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +113,7 @@
 		BCC98D971DAC781B00523F55 /* CoadeShare */ = {
 			isa = PBXGroup;
 			children = (
+				BC5FDAB61DAF20060033CD83 /* Help */,
 				BCC98DAB1DAC794500523F55 /* Model */,
 				BCC98DAC1DAC794500523F55 /* View */,
 				BCC98DAA1DAC794500523F55 /* Controller */,
@@ -108,6 +134,8 @@
 				BCC98DAD1DAC79D500523F55 /* CSTabBarController.swift */,
 				BCC98DAF1DAC828B00523F55 /* CSLoginViewController.swift */,
 				BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */,
+				BC4AB6131DAF819600F10408 /* CSTableViewController.swift */,
+				BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +143,8 @@
 		BCC98DAB1DAC794500523F55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC5FDABF1DAF3BFF0033CD83 /* CSUserModel.swift */,
+				BC4AB6171DAF876800F10408 /* CSModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +152,8 @@
 		BCC98DAC1DAC794500523F55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */,
+				BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCC98DA31DAC781B00523F55 /* LaunchScreen.storyboard in Resources */,
+				BC4AB61C1DAF8A5B00F10408 /* CSMyVideoCell.xib in Resources */,
 				BCC98DA01DAC781B00523F55 /* Assets.xcassets in Resources */,
 				BCC98D9E1DAC781B00523F55 /* Main.storyboard in Resources */,
 			);
@@ -248,8 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5FDBC41DAF67540033CD83 /* CSHelp.swift in Sources */,
+				BC4AB61B1DAF8A5B00F10408 /* CSMyVideoCell.swift in Sources */,
+				BC5FDAB81DAF20370033CD83 /* CSNetHelp.swift in Sources */,
 				BCC98DB01DAC828B00523F55 /* CSLoginViewController.swift in Sources */,
+				BC4AB6181DAF876800F10408 /* CSModel.swift in Sources */,
+				BC5FDAC01DAF3BFF0033CD83 /* CSUserModel.swift in Sources */,
 				BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */,
+				BC4AB6141DAF819600F10408 /* CSTableViewController.swift in Sources */,
+				BC4AB6161DAF867A00F10408 /* CSMyVideoListViewController.swift in Sources */,
 				BCC98DAE1DAC79D500523F55 /* CSTabBarController.swift in Sources */,
 				BCC98DB21DACBEDD00523F55 /* CSRegisterViewController.swift in Sources */,
 				BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */,

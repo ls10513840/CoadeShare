@@ -10,4 +10,5 @@
 #define CoadeShareHeader_h
 
 #import <SMS_SDK/SMSSDK.h>
+
 #endif /* CoadeShareHeader_h */

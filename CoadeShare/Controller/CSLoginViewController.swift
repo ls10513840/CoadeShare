@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import JKCategories
 import Alamofire
-class CSLoginViewController: UIViewController {
+class CSLoginViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,17 +99,32 @@ class CSLoginViewController: UIViewController {
         loginBtn.jk_setBackgroundColor(UIColor.lightGrayColor(), forState: .Disabled)
         loginBtn.jk_setBackgroundColor(UIColor.darkGrayColor(), forState: .Highlighted)
         loginBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
-            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: ["service":"User.Login",
+//            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: ["service":"User.Login",
+//                "phone":userName.text!,
+//                "password":password.text!,
+//                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
+//                    if response.result.isSuccess {
+//                        print(response.result.value)
+//                        self.navigationController?.popViewControllerAnimated(true)
+//                    }else{
+//                        print("网络请求失败")
+//                    }
+//                })
+            CSNetHelp.request(parameters: ["service":"User.Login",
                 "phone":userName.text!,
-                "password":password.text!,
-                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
-                    if response.result.isSuccess {
-                        print(response.result.value)
-                        self.navigationController?.popViewControllerAnimated(true)
+                "password":(password.text! as NSString).jk_md5String,
+                ]).responseJSON({ (data, success) in
+                    if success{
+                        //配置用户数据
+                        CSUserModel.loggin(with: data as! [String : AnyObject])
+                        
+                        
+                        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+                        print(data)
                     }else{
-                        print("网络请求失败")
+                        UIAlertView(title: "错误", message: data as? String, delegate: nil, cancelButtonTitle: "我知道了").show()
                     }
-                })
+            })
         }
         
         self.view.addSubview(loginBtn)
@@ -119,11 +134,6 @@ class CSLoginViewController: UIViewController {
             make.height.equalTo(48)
         }
         
-        let backBtn = UIButton(type: .Custom)
-        backBtn.setImage(UIImage(named:"返回按钮"), forState: .Normal)
-        let backBarBtn = UIBarButtonItem(customView: backBtn)
-        self.navigationItem.leftBarButtonItem = backBarBtn
-        backBtn.frame = CGRectMake(0, 0, 24, 32)
         
         let registerBtn = UIButton(type: .Custom)
         registerBtn.setTitle("注册", forState: .Normal)
@@ -132,12 +142,10 @@ class CSLoginViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = registerBarBtn
         registerBtn.frame = CGRectMake(0, 0, 44, 32)
         
-        backBtn.addTarget(self, action: #selector(backAction), forControlEvents: .TouchUpInside)
+       
         registerBtn.addTarget(self, action: #selector(registerAction), forControlEvents: .TouchUpInside)
     }
-    func backAction(){
-        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
-    }
+  
     func registerAction(){
         let registerCtrl = CSRegisterViewController()
         self.navigationController?.pushViewController(registerCtrl, animated: true)

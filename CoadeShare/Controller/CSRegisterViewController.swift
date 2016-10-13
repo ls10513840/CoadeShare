@@ -10,14 +10,14 @@ import UIKit
 import Alamofire
 import ReactiveCocoa
 
-class CSRegisterViewController: UIViewController {
+class CSRegisterViewController: ViewController {
     
     dynamic var time = -1
     var timer:NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.cyanColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         self.title = "注册"
         // Do any additional setup after loading the view.
         let userName = UITextField()
@@ -133,25 +133,7 @@ class CSRegisterViewController: UIViewController {
                // password.becomeFirstResponder()
             }
         }
-        codeBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
-            self.time = 60
-            
-//            SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethod.init(0), phoneNumber: userName.text, zone: "86", customIdentifier: nil) { (error) in
-//                if error != nil{
-//                    // 让time重置为－1 如果现在符合条件按钮正常
-//                    self.time = -1
-//                }else{
-                    //一开始让time＝－1 （即正常状态，按钮可用）
-                    //当点击获取验证码按钮时让time＝ 60 并每秒递减1，当减到－1时读秒结束
-                    //可用监控的方式改变按钮状态
-                    self.timer = NSTimer.jk_scheduledTimerWithTimeInterval(1, block: {
-                        self.time = self.time - 1
-                        }, repeats: true) as! NSTimer
-                    
-//                }
-//                
-//            }
-        }
+      
 
         
         //将几个信号合并为一个信号订阅并改变注册按钮的状态
@@ -169,7 +151,24 @@ class CSRegisterViewController: UIViewController {
                 codeBtn.setTitle("还剩\(self.time)秒", forState: .Normal)
             }
         }
-        
+        codeBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
+            self.time = 60
+            
+            SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethod.init(0), phoneNumber: userName.text, zone: "86", customIdentifier: nil) { (error) in
+                if error != nil{
+                    // 让time重置为－1 如果现在符合条件按钮正常
+                    self.time = -1
+                }else{
+                    //一开始让time＝－1 （即正常状态，按钮可用）
+                    //当点击获取验证码按钮时让time＝ 60 并每秒递减1，当减到－1时读秒结束
+                    //可用监控的方式改变按钮状态
+                    self.timer = NSTimer.jk_scheduledTimerWithTimeInterval(1, block: {
+                        self.time = self.time - 1
+                        }, repeats: true) as! NSTimer
+                    
+                }
+            }
+        }
         
         //注册
        let registerBtn = UIButton(type:.Custom)
@@ -179,16 +178,30 @@ class CSRegisterViewController: UIViewController {
         registerBtn.jk_setBackgroundColor(UIColor.lightGrayColor(), forState: .Disabled)
         registerBtn.jk_setBackgroundColor(UIColor.darkGrayColor(), forState: .Highlighted)
         registerBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
-            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: ["service":"User.Register",
-                 "phone":userName.text!,
+//            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: ["service":"User.Register",
+//                 "phone":userName.text!,
+//                "password":(password.text! as NSString).jk_md5String,
+//                "verificationCode":code.text!
+//                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
+//                    if response.result.isSuccess {
+//                        print(response.result.value)
+//                        self.navigationController?.popViewControllerAnimated(true)
+//                    }else{
+//                        print("网络请求失败")
+//                    }
+//                })
+            CSNetHelp.request(parameters: ["service":"User.Register",
+                "phone":userName.text!,
                 "password":(password.text! as NSString).jk_md5String,
                 "verificationCode":code.text!
-                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
-                    if response.result.isSuccess {
-                        print(response.result.value)
-                        self.navigationController?.popViewControllerAnimated(true)
+                ]).responseJSON({ (data, success) in
+                    if success {
+                        print("1")
                     }else{
-                        print("网络请求失败")
+                        dispatch_async(dispatch_get_main_queue(), { 
+                            UIAlertView(title: "错误", message: data as? String, delegate: nil, cancelButtonTitle: "我知道了").show()
+                        })
+                        
                     }
                 })
         }
@@ -221,7 +234,7 @@ class CSRegisterViewController: UIViewController {
         }
         */
         registerBtn.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (sender) in
-            print(sender as! UIButton)
+            //print(sender as! UIButton)
         }
         //将变量的改变量作为信号来订阅
         

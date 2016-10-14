@@ -10,6 +10,15 @@ import UIKit
 
 class CSMyVideoListViewController: CSTableViewController {
     var cellInfos:[[String:AnyObject]] = []
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(whitStyle: .Plain)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var cellModels:[AnyObject] = []
     var segmetCtrl:UISegmentedControl?
     var index:Int = 1
@@ -21,7 +30,7 @@ class CSMyVideoListViewController: CSTableViewController {
         self.tableView.registerNib(UINib.init(nibName: String(CSMyVideoCell), bundle: nil), forCellReuseIdentifier: String(CSMyVideoCell))
         self.getData()
         //creatsegment()
-        creatTbHeadView()
+        //creatTbHeadView()
     }
     func creatTbHeadView(){
         let view = UIView()
@@ -37,8 +46,8 @@ class CSMyVideoListViewController: CSTableViewController {
         
         let itemName = ["图片","视频","压缩包"]
         segmetCtrl = UISegmentedControl(items: itemName)
-        segmetCtrl?.layer.borderColor = UIColor ( red: 0.0, green: 0.0, blue: 0.0, alpha: 0.5 ).CGColor
-        segmetCtrl?.layer.borderWidth = 1
+        segmetCtrl?.layer.borderColor = UIColor.clearColor().CGColor
+        segmetCtrl?.layer.borderWidth = 3
         segmetCtrl?.backgroundColor = UIColor.clearColor()
         segmetCtrl?.tintColor = UIColor.clearColor()
         segmetCtrl?.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.blackColor()], forState: .Normal)
@@ -65,6 +74,7 @@ class CSMyVideoListViewController: CSTableViewController {
         cellInfos = [["title":"杭州铁笼沉尸案主犯获死刑","imageUrl":"视频","videoUrl":"http://www.baidu.com"],["title":"河南政府吃饭打白条欠120万，字数不够还得凑","imageUrl":"视频","videoUrl":"http://www.baidu.com"],["title":"河南政府吃饭打白条欠120万，字数不够还得凑","imageUrl":"视频","videoUrl":"http://www.baidu.com"],["title":"河南政府吃饭打白条欠120万，字数不够还得凑","imageUrl":"视频","videoUrl":"http://www.baidu.com"]]
         
         cellModels = NSArray.yy_modelArrayWithClass(CSMyVideoModel.self, json: cellInfos)!
+        
         self.tableView.reloadData()
     }
 
@@ -93,5 +103,8 @@ extension CSMyVideoListViewController{
         let cell =  tableView.dequeueReusableCellWithIdentifier(String(CSMyVideoCell)) as! CSMyVideoCell
         cell.configure(withModel: cellModels[indexPath.row] as! CSMyVideoModel)
         return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

@@ -10,5 +10,5 @@
 #define CoadeShareHeader_h
 
 #import <SMS_SDK/SMSSDK.h>
-
+#import "YZDisplayViewHeader.h"
 #endif /* CoadeShareHeader_h */

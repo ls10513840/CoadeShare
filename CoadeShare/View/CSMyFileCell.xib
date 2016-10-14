@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="171" id="KGk-i7-Jjw" customClass="CSMyFileCell" customModule="CoadeShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="171"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文件图标" translatesAutoresizingMaskIntoConstraints="NO" id="wLv-LA-V8c">
+                        <rect key="frame" x="8" y="55" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="1ao-xI-u3h"/>
+                            <constraint firstAttribute="width" constant="60" id="VHP-Eq-MHJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mej-lB-6M1">
+                        <rect key="frame" x="84" y="55" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-UT-JWU">
+                        <rect key="frame" x="84" y="94" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RT-f4-yRs">
+                        <rect key="frame" x="162" y="94" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9RT-f4-yRs" firstAttribute="bottom" secondItem="EdI-UT-JWU" secondAttribute="bottom" id="0pg-73-4N4"/>
+                    <constraint firstItem="mej-lB-6M1" firstAttribute="leading" secondItem="wLv-LA-V8c" secondAttribute="trailing" constant="16" id="52L-ak-F3o"/>
+                    <constraint firstItem="mej-lB-6M1" firstAttribute="top" secondItem="wLv-LA-V8c" secondAttribute="top" id="BHQ-Iz-NVe"/>
+                    <constraint firstItem="9RT-f4-yRs" firstAttribute="leading" secondItem="EdI-UT-JWU" secondAttribute="trailing" constant="36" id="MRW-iR-6u8"/>
+                    <constraint firstItem="EdI-UT-JWU" firstAttribute="bottom" secondItem="wLv-LA-V8c" secondAttribute="bottom" id="Vmw-Tk-06x"/>
+                    <constraint firstItem="wLv-LA-V8c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="WKe-aw-CMN"/>
+                    <constraint firstItem="wLv-LA-V8c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lN0-s5-Qka"/>
+                    <constraint firstItem="EdI-UT-JWU" firstAttribute="leading" secondItem="wLv-LA-V8c" secondAttribute="trailing" constant="16" id="m04-FY-aa7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fromLabel" destination="9RT-f4-yRs" id="9YE-eL-pcX"/>
+                <outlet property="headImage" destination="wLv-LA-V8c" id="bbn-3t-2Xa"/>
+                <outlet property="sizeLabel" destination="EdI-UT-JWU" id="GIU-0p-uHt"/>
+                <outlet property="titleLabel" destination="mej-lB-6M1" id="PRA-tB-UUW"/>
+            </connections>
+            <point key="canvasLocation" x="485" y="202.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="文件图标" width="52" height="52"/>
+    </resources>
+</document>

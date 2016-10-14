@@ -23,13 +23,13 @@ class CSTabBarController: UITabBarController {
                 "class":"CoadeShare.ViewController"],
             ["title":"消息",
                 "image":"按钮消息",
-                "class":"CoadeShare.ViewController"],
+                "class":"CoadeShare.CSscrollerViewController"],
             ["title":"分享",
                 "image":"按钮分享",
-                "class":"CoadeShare.ViewController"],
+                "class":"CoadeShare.CSscrollerViewController"],
             ["title":"我的",
                 "image":"按钮我的",
-                "class":"CoadeShare.CSMyVideoListViewController"]
+                "class":"CoadeShare.CSMyInfoViewController"]
         ]
         var vcArray:[UINavigationController] = []
         for vcInfo in vcInfos{

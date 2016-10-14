@@ -40,8 +40,11 @@ class ViewController: UIViewController {
                 let backItem = UIBarButtonItem(customView: backBtn)
                 self.navigationItem.leftBarButtonItem = backItem
             
-        }else{
-            //self.hidesBottomBarWhenPushed = true
+        }
+        //只有不是 present出的导航控制器的第二个vc才会隐藏tabbar
+        if self.navigationController?.presentingViewController == nil && self.navigationController?.viewControllers.count >= 2 && self.navigationController?.viewControllers[2] == self{
+            self.hidesBottomBarWhenPushed = true
+            
         }
     }
 
@@ -65,13 +68,18 @@ extension UIViewController{
         return (self.navigationController?.navigationBar.frame.size.height)!
     }
     var tabBarHeight:CGFloat{
-        if self.hidesBottomBarWhenPushed == true{
+        if self.tabBarController == nil && self.navigationController?.viewControllers.first == self{
             return (self.tabBarController?.tabBar.frame.size.height)!
         }else{
             return 0
         }
     }
     var topBarHeight:CGFloat{
-        return statusBarHeight + navBarHeight
+        if self.navigationController != nil{
+            return statusBarHeight + navBarHeight
+        }else{
+            return 0
+        }
+        
     }
 }

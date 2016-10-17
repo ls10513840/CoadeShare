@@ -14,7 +14,7 @@ class CSUserModel: NSObject {
     private override init() {
         super.init()
         // 取出沙盒数据 配置默认用户
-        if let userInfo = NSUserDefaults.standardUserDefaults().objectForKey(String(self)){
+        if let userInfo = NSUserDefaults.standardUserDefaults().objectForKey(String(CSUserModel)){
             self.yy_modelSetWithJSON(userInfo)
         }
     }

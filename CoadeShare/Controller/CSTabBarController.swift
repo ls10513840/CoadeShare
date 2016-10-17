@@ -20,7 +20,7 @@ class CSTabBarController: UITabBarController {
         let vcInfos = [
             ["title":"主页",
                 "image":"按钮主页",
-                "class":"CoadeShare.ViewController"],
+                "class":"CoadeShare.CSMainViewController"],
             ["title":"消息",
                 "image":"按钮消息",
                 "class":"CoadeShare.CSscrollerViewController"],

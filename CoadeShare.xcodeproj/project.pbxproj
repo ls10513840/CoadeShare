@@ -35,6 +35,14 @@
 		BCC98DAE1DAC79D500523F55 /* CSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98DAD1DAC79D500523F55 /* CSTabBarController.swift */; };
 		BCC98DB01DAC828B00523F55 /* CSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98DAF1DAC828B00523F55 /* CSLoginViewController.swift */; };
 		BCC98DB21DACBEDD00523F55 /* CSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */; };
+		BCCA2EFB1DB4617D00F0D227 /* CSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */; };
+		BCCA2EFD1DB4622500F0D227 /* CSMainPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */; };
+		BCCA2EFF1DB4623C00F0D227 /* CSMainVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */; };
+		BCCA2F011DB4625500F0D227 /* CSMainFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */; };
+		BCCA2F031DB4633F00F0D227 /* CSMainPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */; };
+		BCCA2F061DB4AB9700F0D227 /* CSMainVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */; };
+		BCCA2F071DB4AB9700F0D227 /* CSMainVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */; };
+		BCCA2F091DB4B61B00F0D227 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCA2F081DB4B61B00F0D227 /* videoData.json */; };
 		F7B8863E0A983FB21D9CA086 /* Pods_CoadeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE943BCE3D4FF3DA668378D4 /* Pods_CoadeShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +83,14 @@
 		BCC98DAD1DAC79D500523F55 /* CSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTabBarController.swift; sourceTree = "<group>"; };
 		BCC98DAF1DAC828B00523F55 /* CSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSLoginViewController.swift; sourceTree = "<group>"; };
 		BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSRegisterViewController.swift; sourceTree = "<group>"; };
+		BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainViewController.swift; sourceTree = "<group>"; };
+		BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainPicViewController.swift; sourceTree = "<group>"; };
+		BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainVideoViewController.swift; sourceTree = "<group>"; };
+		BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainFileViewController.swift; sourceTree = "<group>"; };
+		BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainPicCell.swift; sourceTree = "<group>"; };
+		BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainVideoCell.swift; sourceTree = "<group>"; };
+		BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMainVideoCell.xib; sourceTree = "<group>"; };
+		BCCA2F081DB4B61B00F0D227 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
 		BE943BCE3D4FF3DA668378D4 /* Pods_CoadeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoadeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C851C1FA10EDDF93960EFCB0 /* Pods-CoadeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoadeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoadeShare/Pods-CoadeShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +141,7 @@
 		BC5FDAB61DAF20060033CD83 /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				BCCA2F081DB4B61B00F0D227 /* videoData.json */,
 				BC16D5741DB0695400C646F9 /* Reusable+CSExtensions.swift */,
 				BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */,
 				BC5FDBC31DAF67540033CD83 /* CSHelp.swift */,
@@ -178,10 +195,14 @@
 				BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */,
 				BC4AB6131DAF819600F10408 /* CSTableViewController.swift */,
 				BC16D5811DB0714000C646F9 /* CSMyInfoViewController.swift */,
+				BC16D58D1DB0B3F300C646F9 /* CSscrollerViewController.swift */,
 				BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */,
 				BC16D5831DB0768400C646F9 /* MyFileListViewController.swift */,
 				BC16D5891DB08B3200C646F9 /* CSMyPicViewController.swift */,
-				BC16D58D1DB0B3F300C646F9 /* CSscrollerViewController.swift */,
+				BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */,
+				BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */,
+				BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */,
+				BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +224,9 @@
 				BC16D5851DB0788400C646F9 /* CSMyFileCell.swift */,
 				BC16D5861DB0788400C646F9 /* CSMyFileCell.xib */,
 				BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */,
+				BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */,
+				BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */,
+				BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +296,8 @@
 				BCC98DA31DAC781B00523F55 /* LaunchScreen.storyboard in Resources */,
 				BC4AB61C1DAF8A5B00F10408 /* CSMyVideoCell.xib in Resources */,
 				BCC98DA01DAC781B00523F55 /* Assets.xcassets in Resources */,
+				BCCA2F091DB4B61B00F0D227 /* videoData.json in Resources */,
+				BCCA2F071DB4AB9700F0D227 /* CSMainVideoCell.xib in Resources */,
 				BCC98D9E1DAC781B00523F55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,21 +362,27 @@
 				BC5FDBC41DAF67540033CD83 /* CSHelp.swift in Sources */,
 				BC4AB61B1DAF8A5B00F10408 /* CSMyVideoCell.swift in Sources */,
 				BC16D5751DB0695400C646F9 /* Reusable+CSExtensions.swift in Sources */,
+				BCCA2F061DB4AB9700F0D227 /* CSMainVideoCell.swift in Sources */,
 				BC16D57E1DB06FB300C646F9 /* UIView+Frame.m in Sources */,
 				BC16D5801DB06FB300C646F9 /* YZDisplayViewController.m in Sources */,
 				BC16D58E1DB0B3F300C646F9 /* CSscrollerViewController.swift in Sources */,
 				BC5FDAB81DAF20370033CD83 /* CSNetHelp.swift in Sources */,
+				BCCA2F031DB4633F00F0D227 /* CSMainPicCell.swift in Sources */,
 				BC16D5821DB0714000C646F9 /* CSMyInfoViewController.swift in Sources */,
 				BCC98DB01DAC828B00523F55 /* CSLoginViewController.swift in Sources */,
 				BC4AB6181DAF876800F10408 /* CSModel.swift in Sources */,
 				BC5FDAC01DAF3BFF0033CD83 /* CSUserModel.swift in Sources */,
 				BC16D5841DB0768400C646F9 /* MyFileListViewController.swift in Sources */,
 				BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */,
+				BCCA2EFB1DB4617D00F0D227 /* CSMainViewController.swift in Sources */,
+				BCCA2EFD1DB4622500F0D227 /* CSMainPicViewController.swift in Sources */,
+				BCCA2EFF1DB4623C00F0D227 /* CSMainVideoViewController.swift in Sources */,
 				BC4AB6141DAF819600F10408 /* CSTableViewController.swift in Sources */,
 				BC4AB6161DAF867A00F10408 /* CSMyVideoListViewController.swift in Sources */,
 				BC16D57F1DB06FB300C646F9 /* YZDisplayTitleLabel.m in Sources */,
 				BCC98DAE1DAC79D500523F55 /* CSTabBarController.swift in Sources */,
 				BCC98DB21DACBEDD00523F55 /* CSRegisterViewController.swift in Sources */,
+				BCCA2F011DB4625500F0D227 /* CSMainFileViewController.swift in Sources */,
 				BC16D5871DB0788400C646F9 /* CSMyFileCell.swift in Sources */,
 				BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */,
 				BCC98D991DAC781B00523F55 /* AppDelegate.swift in Sources */,

@@ -1,22 +1,24 @@
 //
-//  CSMianFileViewController.swift
+//  CSScanViewController.swift
 //  CoadeShare
 //
-//  Created by 千锋 on 16/10/17.
+//  Created by 千锋 on 16/10/18.
 //  Copyright © 2016年 千锋. All rights reserved.
 //
 
 import UIKit
-
-class CSMainFileViewController: CSTableViewController {
+import swiftScan
+class CSScanViewController: LBXScanViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(NSHomeDirectory())
     }
-
+    override func handleCodeResult(arrayResult: [LBXScanResult]) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

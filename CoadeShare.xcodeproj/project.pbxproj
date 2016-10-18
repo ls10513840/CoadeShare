@@ -19,6 +19,8 @@
 		BC16D58C1DB08DDF00C646F9 /* CSMypicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */; };
 		BC16D58E1DB0B3F300C646F9 /* CSscrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC16D58D1DB0B3F300C646F9 /* CSscrollerViewController.swift */; };
 		BC23518A1DADD10F0075AB2A /* CoadeShareInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */; };
+		BC31F7EE1DB5B2500059225A /* CSSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31F7ED1DB5B2500059225A /* CSSettingViewController.swift */; };
+		BC31F7F01DB5BA850059225A /* CSMyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31F7EF1DB5BA850059225A /* CSMyDetailViewController.swift */; };
 		BC4AB6141DAF819600F10408 /* CSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6131DAF819600F10408 /* CSTableViewController.swift */; };
 		BC4AB6161DAF867A00F10408 /* CSMyVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */; };
 		BC4AB6181DAF876800F10408 /* CSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4AB6171DAF876800F10408 /* CSModel.swift */; };
@@ -27,6 +29,10 @@
 		BC5FDAB81DAF20370033CD83 /* CSNetHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */; };
 		BC5FDAC01DAF3BFF0033CD83 /* CSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDABF1DAF3BFF0033CD83 /* CSUserModel.swift */; };
 		BC5FDBC41DAF67540033CD83 /* CSHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5FDBC31DAF67540033CD83 /* CSHelp.swift */; };
+		BCA929D51DB602D200E0914C /* CSScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA929D41DB602D200E0914C /* CSScanViewController.swift */; };
+		BCA929D71DB6033D00E0914C /* CSMyQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA929D61DB6033D00E0914C /* CSMyQRCodeViewController.swift */; };
+		BCB0F8671DB6119C000253FD /* CSShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0F8661DB6119C000253FD /* CSShareViewController.swift */; };
+		BCB0F8691DB61884000253FD /* CSSharePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0F8681DB61884000253FD /* CSSharePhotoViewController.swift */; };
 		BCC98D991DAC781B00523F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D981DAC781B00523F55 /* AppDelegate.swift */; };
 		BCC98D9B1DAC781B00523F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC98D9A1DAC781B00523F55 /* ViewController.swift */; };
 		BCC98D9E1DAC781B00523F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC98D9C1DAC781B00523F55 /* Main.storyboard */; };
@@ -56,23 +62,29 @@
 		BC16D57B1DB06FB300C646F9 /* YZDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayViewController.h; sourceTree = "<group>"; };
 		BC16D57C1DB06FB300C646F9 /* YZDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDisplayViewController.m; sourceTree = "<group>"; };
 		BC16D57D1DB06FB300C646F9 /* YZDisplayViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZDisplayViewHeader.h; sourceTree = "<group>"; };
-		BC16D5811DB0714000C646F9 /* CSMyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyInfoViewController.swift; sourceTree = "<group>"; };
-		BC16D5831DB0768400C646F9 /* MyFileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFileListViewController.swift; sourceTree = "<group>"; };
-		BC16D5851DB0788400C646F9 /* CSMyFileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyFileCell.swift; sourceTree = "<group>"; };
-		BC16D5861DB0788400C646F9 /* CSMyFileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMyFileCell.xib; sourceTree = "<group>"; };
-		BC16D5891DB08B3200C646F9 /* CSMyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyPicViewController.swift; sourceTree = "<group>"; };
-		BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMypicCell.swift; sourceTree = "<group>"; };
+		BC16D5811DB0714000C646F9 /* CSMyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMyInfoViewController.swift; path = ../CSMyInfoViewController.swift; sourceTree = "<group>"; };
+		BC16D5831DB0768400C646F9 /* MyFileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFileListViewController.swift; path = ../MyFileListViewController.swift; sourceTree = "<group>"; };
+		BC16D5851DB0788400C646F9 /* CSMyFileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMyFileCell.swift; path = ../CSMyFileCell.swift; sourceTree = "<group>"; };
+		BC16D5861DB0788400C646F9 /* CSMyFileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSMyFileCell.xib; path = ../CSMyFileCell.xib; sourceTree = "<group>"; };
+		BC16D5891DB08B3200C646F9 /* CSMyPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMyPicViewController.swift; path = ../CSMyPicViewController.swift; sourceTree = "<group>"; };
+		BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMypicCell.swift; path = ../CSMypicCell.swift; sourceTree = "<group>"; };
 		BC16D58D1DB0B3F300C646F9 /* CSscrollerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSscrollerViewController.swift; sourceTree = "<group>"; };
 		BC2351891DADD10F0075AB2A /* CoadeShareInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoadeShareInit.swift; sourceTree = "<group>"; };
+		BC31F7ED1DB5B2500059225A /* CSSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSSettingViewController.swift; sourceTree = "<group>"; };
+		BC31F7EF1DB5BA850059225A /* CSMyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyDetailViewController.swift; sourceTree = "<group>"; };
 		BC49D7CA1DADDD7E00A5F30A /* CoadeShareHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoadeShareHeader.h; sourceTree = "<group>"; };
 		BC4AB6131DAF819600F10408 /* CSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTableViewController.swift; sourceTree = "<group>"; };
-		BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoListViewController.swift; sourceTree = "<group>"; };
+		BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMyVideoListViewController.swift; path = ../CSMyVideoListViewController.swift; sourceTree = "<group>"; };
 		BC4AB6171DAF876800F10408 /* CSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSModel.swift; sourceTree = "<group>"; };
-		BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoCell.swift; sourceTree = "<group>"; };
-		BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMyVideoCell.xib; sourceTree = "<group>"; };
+		BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMyVideoCell.swift; path = ../CSMyVideoCell.swift; sourceTree = "<group>"; };
+		BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSMyVideoCell.xib; path = ../CSMyVideoCell.xib; sourceTree = "<group>"; };
 		BC5FDAB71DAF20370033CD83 /* CSNetHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSNetHelp.swift; sourceTree = "<group>"; };
 		BC5FDABF1DAF3BFF0033CD83 /* CSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserModel.swift; sourceTree = "<group>"; };
 		BC5FDBC31DAF67540033CD83 /* CSHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHelp.swift; sourceTree = "<group>"; };
+		BCA929D41DB602D200E0914C /* CSScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSScanViewController.swift; sourceTree = "<group>"; };
+		BCA929D61DB6033D00E0914C /* CSMyQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyQRCodeViewController.swift; sourceTree = "<group>"; };
+		BCB0F8661DB6119C000253FD /* CSShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSShareViewController.swift; sourceTree = "<group>"; };
+		BCB0F8681DB61884000253FD /* CSSharePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSSharePhotoViewController.swift; sourceTree = "<group>"; };
 		BCC98D951DAC781B00523F55 /* CoadeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoadeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC98D981DAC781B00523F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCC98D9A1DAC781B00523F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,13 +95,13 @@
 		BCC98DAD1DAC79D500523F55 /* CSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTabBarController.swift; sourceTree = "<group>"; };
 		BCC98DAF1DAC828B00523F55 /* CSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSLoginViewController.swift; sourceTree = "<group>"; };
 		BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSRegisterViewController.swift; sourceTree = "<group>"; };
-		BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainViewController.swift; sourceTree = "<group>"; };
-		BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainPicViewController.swift; sourceTree = "<group>"; };
-		BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainVideoViewController.swift; sourceTree = "<group>"; };
-		BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainFileViewController.swift; sourceTree = "<group>"; };
-		BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainPicCell.swift; sourceTree = "<group>"; };
-		BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMainVideoCell.swift; sourceTree = "<group>"; };
-		BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMainVideoCell.xib; sourceTree = "<group>"; };
+		BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainViewController.swift; path = ../CSMainViewController.swift; sourceTree = "<group>"; };
+		BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainPicViewController.swift; path = ../CSMainPicViewController.swift; sourceTree = "<group>"; };
+		BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainVideoViewController.swift; path = ../CSMainVideoViewController.swift; sourceTree = "<group>"; };
+		BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainFileViewController.swift; path = ../CSMainFileViewController.swift; sourceTree = "<group>"; };
+		BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainPicCell.swift; path = ../CSMainPicCell.swift; sourceTree = "<group>"; };
+		BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSMainVideoCell.swift; path = ../CSMainVideoCell.swift; sourceTree = "<group>"; };
+		BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CSMainVideoCell.xib; path = ../CSMainVideoCell.xib; sourceTree = "<group>"; };
 		BCCA2F081DB4B61B00F0D227 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
 		BE943BCE3D4FF3DA668378D4 /* Pods_CoadeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoadeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C851C1FA10EDDF93960EFCB0 /* Pods-CoadeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoadeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoadeShare/Pods-CoadeShare.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +148,54 @@
 				BC16D57D1DB06FB300C646F9 /* YZDisplayViewHeader.h */,
 			);
 			path = YZDisplayViewController;
+			sourceTree = "<group>";
+		};
+		BC4DD7AF1DB4EAB5002F0739 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				BC16D5831DB0768400C646F9 /* MyFileListViewController.swift */,
+				BC16D5891DB08B3200C646F9 /* CSMyPicViewController.swift */,
+				BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */,
+				BC16D5811DB0714000C646F9 /* CSMyInfoViewController.swift */,
+				BC31F7ED1DB5B2500059225A /* CSSettingViewController.swift */,
+				BC31F7EF1DB5BA850059225A /* CSMyDetailViewController.swift */,
+				BCA929D41DB602D200E0914C /* CSScanViewController.swift */,
+				BCA929D61DB6033D00E0914C /* CSMyQRCodeViewController.swift */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		BC4DD7B01DB4EAB6002F0739 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */,
+				BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */,
+				BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */,
+				BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		BC4DD7B11DB4EAC1002F0739 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */,
+				BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */,
+				BC16D5851DB0788400C646F9 /* CSMyFileCell.swift */,
+				BC16D5861DB0788400C646F9 /* CSMyFileCell.xib */,
+				BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */,
+				BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		BC4DD7B21DB4EAC1002F0739 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */,
+				BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */,
+			);
+			path = "主页";
 			sourceTree = "<group>";
 		};
 		BC5FDAB61DAF20060033CD83 /* Help */ = {
@@ -190,19 +250,15 @@
 		BCC98DAA1DAC794500523F55 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC4DD7B01DB4EAB6002F0739 /* 主页 */,
+				BC4DD7AF1DB4EAB5002F0739 /* 我的 */,
 				BCC98DAD1DAC79D500523F55 /* CSTabBarController.swift */,
 				BCC98DAF1DAC828B00523F55 /* CSLoginViewController.swift */,
 				BCC98DB11DACBEDD00523F55 /* CSRegisterViewController.swift */,
 				BC4AB6131DAF819600F10408 /* CSTableViewController.swift */,
-				BC16D5811DB0714000C646F9 /* CSMyInfoViewController.swift */,
 				BC16D58D1DB0B3F300C646F9 /* CSscrollerViewController.swift */,
-				BC4AB6151DAF867A00F10408 /* CSMyVideoListViewController.swift */,
-				BC16D5831DB0768400C646F9 /* MyFileListViewController.swift */,
-				BC16D5891DB08B3200C646F9 /* CSMyPicViewController.swift */,
-				BCCA2EFA1DB4617D00F0D227 /* CSMainViewController.swift */,
-				BCCA2EFC1DB4622500F0D227 /* CSMainPicViewController.swift */,
-				BCCA2EFE1DB4623C00F0D227 /* CSMainVideoViewController.swift */,
-				BCCA2F001DB4625500F0D227 /* CSMainFileViewController.swift */,
+				BCB0F8661DB6119C000253FD /* CSShareViewController.swift */,
+				BCB0F8681DB61884000253FD /* CSSharePhotoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,14 +275,8 @@
 		BCC98DAC1DAC794500523F55 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC4AB6191DAF8A5B00F10408 /* CSMyVideoCell.swift */,
-				BC4AB61A1DAF8A5B00F10408 /* CSMyVideoCell.xib */,
-				BC16D5851DB0788400C646F9 /* CSMyFileCell.swift */,
-				BC16D5861DB0788400C646F9 /* CSMyFileCell.xib */,
-				BC16D58B1DB08DDF00C646F9 /* CSMypicCell.swift */,
-				BCCA2F021DB4633F00F0D227 /* CSMainPicCell.swift */,
-				BCCA2F041DB4AB9700F0D227 /* CSMainVideoCell.swift */,
-				BCCA2F051DB4AB9700F0D227 /* CSMainVideoCell.xib */,
+				BC4DD7B21DB4EAC1002F0739 /* 主页 */,
+				BC4DD7B11DB4EAC1002F0739 /* 我的 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +409,9 @@
 			files = (
 				BC16D58C1DB08DDF00C646F9 /* CSMypicCell.swift in Sources */,
 				BC16D58A1DB08B3200C646F9 /* CSMyPicViewController.swift in Sources */,
+				BCA929D71DB6033D00E0914C /* CSMyQRCodeViewController.swift in Sources */,
+				BC31F7F01DB5BA850059225A /* CSMyDetailViewController.swift in Sources */,
+				BCB0F8691DB61884000253FD /* CSSharePhotoViewController.swift in Sources */,
 				BC5FDBC41DAF67540033CD83 /* CSHelp.swift in Sources */,
 				BC4AB61B1DAF8A5B00F10408 /* CSMyVideoCell.swift in Sources */,
 				BC16D5751DB0695400C646F9 /* Reusable+CSExtensions.swift in Sources */,
@@ -369,7 +422,10 @@
 				BC5FDAB81DAF20370033CD83 /* CSNetHelp.swift in Sources */,
 				BCCA2F031DB4633F00F0D227 /* CSMainPicCell.swift in Sources */,
 				BC16D5821DB0714000C646F9 /* CSMyInfoViewController.swift in Sources */,
+				BCB0F8671DB6119C000253FD /* CSShareViewController.swift in Sources */,
 				BCC98DB01DAC828B00523F55 /* CSLoginViewController.swift in Sources */,
+				BC31F7EE1DB5B2500059225A /* CSSettingViewController.swift in Sources */,
+				BCA929D51DB602D200E0914C /* CSScanViewController.swift in Sources */,
 				BC4AB6181DAF876800F10408 /* CSModel.swift in Sources */,
 				BC5FDAC01DAF3BFF0033CD83 /* CSUserModel.swift in Sources */,
 				BC16D5841DB0768400C646F9 /* MyFileListViewController.swift in Sources */,

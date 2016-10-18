@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             
         }
         //只有不是 present出的导航控制器的第二个vc才会隐藏tabbar
-        if self.navigationController?.presentingViewController == nil && self.navigationController?.viewControllers.count >= 2 && self.navigationController?.viewControllers[2] == self{
+        if self.navigationController?.presentingViewController == nil && self.navigationController?.viewControllers.count >= 2 && self.navigationController?.viewControllers[1] == self{
             self.hidesBottomBarWhenPushed = true
             
         }

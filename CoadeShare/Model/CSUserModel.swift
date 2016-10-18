@@ -38,12 +38,12 @@ class CSUserModel: NSObject {
     }
    
     //根据获取到的用户信息，配置用户数据 
-    class func loggin(with UserInfo:[String:AnyObject]){
+    class func loggin(with userInfo:[String:AnyObject]){
         //用YYMode 做字典转模型
         //SharedUser.setValuesForKeysWithDictionary(UserInfo)
-        SharedUser.yy_modelSetWithDictionary(UserInfo)
+        SharedUser.yy_modelSetWithDictionary(userInfo)
         
-        // 将用户数据储存到沙河里
+        // 将用户数据储存到沙盒里
         NSUserDefaults.standardUserDefaults().setObject(SharedUser.yy_modelToJSONObject(), forKey: String(CSUserModel))
         NSUserDefaults.standardUserDefaults().synchronize()
     }

@@ -9,6 +9,8 @@
 import UIKit
 
 class CSMyInfoViewController: CSscrollerViewController {
+    
+    let headImage = UIImageView(image: UIImage(named: "头像"))
     var dispalyController = YZDisplayViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class CSMyInfoViewController: CSscrollerViewController {
             make.left.right.equalTo(0)
             make.height.equalTo(180)
         }
-        let headImage = UIImageView(image: UIImage(named: "头像"))
+        
         backImage.addSubview(headImage)
         headImage.snp_makeConstraints { (make) in
             make.left.top.equalTo(16)
@@ -53,14 +55,22 @@ class CSMyInfoViewController: CSscrollerViewController {
             make.left.equalTo(nameLabel)
             make.bottom.equalTo(headImage)
         }
+        //设置
         let setButton = UIButton(type: .Custom)
         setButton.setTitle("设置", forState: .Normal)
         setButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         setButton.titleLabel?.font = UIFont.systemFontOfSize(15)
         backImage.addSubview(setButton)
+        backImage.userInteractionEnabled = true
         setButton.snp_makeConstraints { (make) in
             make.right.equalTo(-20)
             make.centerY.equalTo(0)
+        }
+        setButton.jk_handleControlEvents(.TouchUpInside) { (sender) in
+            let settingVC = CSSettingViewController()
+            settingVC.hidesBottomBarWhenPushed = true
+            settingVC.title = "设置"
+            self.navigationController?.pushViewController(settingVC, animated: true)
         }
         nameLabel.text = "大熊猫"
         emailLabel.text = "hehe@qq.com"
@@ -112,7 +122,11 @@ class CSMyInfoViewController: CSscrollerViewController {
             endB.memory = 0.75
         }
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        //在这个方法里 让界面根据用户模型的改变而改变
+         headImage.sd_setImageWithURL(NSURL(string: CSUserModel.SharedUser.avatar))
+    }
     func configureViewControllers(){
         //let dispalyController = YZDisplayViewController.init()
         let picListVC = CSMyPicViewController(nibName: nil, bundle: nil)

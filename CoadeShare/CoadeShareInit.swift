@@ -9,7 +9,7 @@
 import Foundation
 //网络请求基地址
 // 一般项目均会又一个测试地址，与正式环境的不一样，所以一般我们会根据是否时DEBUG 模式改变baseUrl
-#if DEBUG
+#if true
 let QFAppBaseURL = "http://10.12.155.20/PhalApi/Public/CodeShare/"
 #else
  let QFAppBaseURL = "http://www.1000phone.tk/"

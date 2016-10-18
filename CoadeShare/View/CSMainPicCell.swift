@@ -12,7 +12,7 @@ import WPAttributedMarkup
 import SDCycleScrollView
 import IDMPhotoBrowser
 class CSMainPicCell: UITableViewCell {
-    var pageLabel = UILabel()
+    var pageLabel = UILabel.init()
     var imageGroup = ["image01","image02","image03"]
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -93,7 +93,7 @@ class CSMainPicCell: UITableViewCell {
         pageLabel.textColor = UIColor.whiteColor()
         pageLabel.backgroundColor = UIColor ( red: 0.6667, green: 0.6667, blue: 0.6667, alpha: 0.66 )
         pageLabel.font = UIFont.systemFontOfSize(10)
-        //pageLabel.text = "1/3"
+        pageLabel.text = "1/3"
         pageLabel.textAlignment = .Center
         pageLabel.layer.cornerRadius = 12
         pageLabel.layer.masksToBounds = true

@@ -10,9 +10,10 @@ import UIKit
 
 class CSMypicCell: UICollectionViewCell {
     var mask = UIView()
+   let imageView = UIImageView(image: UIImage(named: "图片"))
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let imageView = UIImageView(image: UIImage(named: "图片"))
+        
         self.contentView.addSubview(imageView)
         imageView.snp_makeConstraints { (make) in
             make.edges.equalTo(0)
